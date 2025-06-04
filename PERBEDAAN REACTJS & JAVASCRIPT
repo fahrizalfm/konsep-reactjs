@@ -1,9 +1,33 @@
 IMPORT & EXPORT
-  pada javascript biasa ketika kita ingin menggunakan variabel pada file berbeda harus mendefinisikannya secara embeded terstruktur pada file html atau import dan export dari file ke file
-  misal utils.js (berada di folder):
+  pada javascript biasa ketika kita ingin menggunakan variabel pada file berbeda harus mendefinisikannya secara embeded terstruktur pada file html:
+  <script src="script/utils.js"><script/>
+  <script src="script/app.js"><script/>
+
+  atau import dan export dari file ke file
+  misal utils.js (berada di folder script):
     //mendefinisikan variabel baru lalu export
     export let variabel = "test"
+  lalu pada App.js (berada di folder script):
+    //mengakses variabel di utils
+    import {variabel} from "./utils"
 
-  lalu pada App.js (berada di folder src):
-    import {variabel} from "./"
+  atau membuat export secara grouping/listing:
+    utisl.js:
+    //mendefinisikan variabel baru lalu export
+    export let variabel = "test"
+    export let variabel2 = "test2"
+    app.js:
+    //mengakses variabel di utils
+    import {variabel, variabel2} from "./utils"
 
+  atau membuat export secara object notasi:
+    utisl.js:
+    //mendefinisikan variabel baru lalu export
+    export let variabel = "test"
+    export let variabel2 = "test2"
+    app.js:
+    //mengakses variabel di utils
+    import * as utils from "./utils"
+    console.log(utils.variabel2)
+
+  maka reactjs mengimplementasikan konsep import-export tersebut secara sederhana mengcompile/mengunduh file tersebut secara berurutan dilaman browser
