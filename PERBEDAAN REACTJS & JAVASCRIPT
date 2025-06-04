@@ -125,3 +125,42 @@ ARRAYS & MAP
   data.map((item) => {
     ({data: item + 1})
   })
+
+DESTRUCTURING (IN MODERN JS)
+  Destruturing array:
+  //definisi array sederhana
+  const data = [1, 2, 4, 6, 5]
+  //destructuring array (pemanggilan secara singkat di dalam variabel itu sendiri)
+  const [data1, data2, data3, data4, data5] = [1, 2, 4, 6, 5]
+
+  Destructuring object:
+  //mendefinisikan sebuah objek
+  const user = {
+    name: 'test',
+    age: 34,
+    greet() {
+      console.log("halo")
+    }
+  }
+  //destructuring objek
+  const {nama, umur, fungsiSalam} = {
+    name: 'test',
+    age: 34,
+    greet() {
+      console.log("halo")
+    }
+  }
+
+  Destructuring paramaters list
+  //standar penerimaan parameter dari sebuah argumen bertipe objek atau array
+  function storeOrder(order) {
+    localStorage.setItem('id', order.id);
+    localStorage.setItem('currency', order.currency);
+  }
+  //ketika dilakukan destructuring. Kenapa dilakukan destructuring pada dasarnya objek dan array linear berurutan sesuai struktur definisinya
+  function storeOrder({id, currency}) {
+    localStorage.setItem('id', id);
+    localStorage.setItem('currency', currency);
+  }
+
+  Konsep destructuring banyak diadopsi di dalam reactjs
