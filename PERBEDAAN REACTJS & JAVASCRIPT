@@ -38,6 +38,33 @@ IMPORT & EXPORT
     //mengakses dan memberikan nama variabel default saat melakukan import
     import variabel from "./utils"
     
-    
+  Maka reactjs mengimplementasikan konsep import-export tersebut secara sederhana tanpa mengcompile/mengunduh file tersebut secara berurutan (satu persatu) dilaman browser, tetapi dicompile menggunakan dependenci react sebelum dirender ke laman browser
 
-  Maka reactjs mengimplementasikan konsep import-export tersebut secara sederhana mengcompile/mengunduh file tersebut secara berurutan dilaman browser
+VARIABLES & VALUES
+  Revisiting merupakan aturan sintaksis untuk penamaan variabel yg umumnya identik dengan camelCase, tanpa spasi (whitespace), dan memiliki penamaan fungsi yang jelas dan bisa membedakan jenis variabel let dan const
+
+FUNCTIONS & PARAMATERS
+  Pada js terdiri dari beberapa jenis penulisan function yaitu:
+  Basic:
+    function greet() {
+      let variabel = "test"
+      return console.log(variabel)
+    }
+    //memanggil
+    greet()
+  Arrow:
+    const greet => () {}
+
+  Sedangkan parameter merupakan values yang berada dalam function
+    function greet(sayIt) {
+      return console.log(sayIt)
+    }
+
+  Pada reactjs pada umumnya menerpakan arrow function karna lebih ringkas dalam sintaksi
+
+OBJECTS & CLASSES
+  Secara umum object merupakan kumpulan dari beberapa data yang terkoleksi dalam satu objek yang terdiri dari properti dan value
+  const user = {
+    name: 'test',
+    age: 34
+  }
