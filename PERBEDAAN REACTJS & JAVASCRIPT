@@ -164,3 +164,23 @@ DESTRUCTURING (IN MODERN JS)
   }
 
   Konsep destructuring banyak diadopsi di dalam reactjs
+
+SPREAD OPERATOR
+  Spread operator meruapakan penggabungan sebuah data baik tipe objek dan array. penggabungan disini tidak dilakuka secara bersarang (nested) akan tetapi lebih menjadi satu koleksi data (objek atau araay)
+  Spread array:
+  const data = [1, 2, 4, 6, 5]
+  const data1 = [1, 2, 4, 6, 5]
+  //pull out array with spread operator
+  const newData = [...data, ...data1]
+
+  Spread object:
+  const user = {
+    name: 'test',
+    age: 34,
+  }
+  const extendUser = {
+    name1: 'test',
+    age2: 34,
+  }
+  const newUser = {...user, ...extendUser}
+  
