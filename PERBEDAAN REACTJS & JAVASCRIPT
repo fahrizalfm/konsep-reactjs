@@ -63,8 +63,61 @@ FUNCTIONS & PARAMATERS
   Pada reactjs pada umumnya menerpakan arrow function karna lebih ringkas dalam sintaksi
 
 OBJECTS & CLASSES
-  Secara umum object merupakan kumpulan dari beberapa data yang terkoleksi dalam satu objek yang terdiri dari properti dan value
+  Secara umum object merupakan kumpulan dari beberapa data (bisa variabel atau sebuah function) yang terkoleksi dalam satu objek yang terdiri dari unsur properti dan value
+  //mendefinisikan sebuah objek
   const user = {
     name: 'test',
-    age: 34
+    age: 34,
+    greet() {
+      console.log("halo")
+    }
   }
+
+  //memangil properti dari objek/objek notasi
+  console.log(user.greet())
+
+  Class adalah sebuah blueprint untuk membuat lebih banyak objek, variabel dan fungsi. Dimana nama class merupakan ProperCase
+  class User {
+    constructor(name, age) {
+      this.name = name
+      this.age = age
+    }
+
+    const greet => () {
+      console.log("hallo")
+    }
+  }
+
+  //mengakses class
+  const user1 = new User("Man", 35)
+  console.log(user1)
+  user1.greet();
+
+ARRAYS & MAP
+  Array merupakan sebuah sekumpulan nilai yang memiliki urutan absolut berbeda dengan objek yang tidak memiliki indexing pada nilai-nilainya
+  const data = [1, 2, 4, 6, 5]
+  
+  //akses nilai dalam array
+  data[0]
+
+  //menambahkan nilai baru kedalam array
+  data.push(9)
+
+  //atau mencari index tertentu seccara identik
+  data.findIndex((item)=>{
+    return item === 1
+  })
+
+  //fungsi diatas bisa dienkapsulasi kembali kedalam sebuah variabel. dalamm artian pada sintaksis js menggunakan arrow function sangan ringkas
+  const index = data.findIndex((item)=>{
+    return item === 1
+  }) 
+
+  Map adalah pemetaan untuk mengubah data dari kumpulan nilai. hampir sama seperti fungsi findIndex akan tetapi pada penerapan reactjs implementasi pemetaan data banyak menggunakan map
+  //contoh penerapan
+  data.map((item) => {
+    item + 1
+  })
+
+  //harusnya hasilnya seperti ini array(2,3,5,7,6)
+
