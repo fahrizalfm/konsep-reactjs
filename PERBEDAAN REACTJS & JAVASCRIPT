@@ -1,0 +1,9 @@
+IMPORT & EXPORT
+  pada javascript biasa ketika kita ingin menggunakan variabel pada file berbeda harus mendefinisikannya secara embeded terstruktur pada file html atau import dan export dari file ke file
+  misal utils.js (berada di folder):
+    //mendefinisikan variabel baru lalu export
+    export let variabel = "test"
+
+  lalu pada App.js (berada di folder src):
+    import {variabel} from "./"
+
