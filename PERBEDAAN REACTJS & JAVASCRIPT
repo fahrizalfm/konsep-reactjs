@@ -121,3 +121,7 @@ ARRAYS & MAP
 
   //harusnya hasilnya seperti ini array(2,3,5,7,6)
 
+  Atau jika ingin membungkus setiap nilai dari array menjadi sebuh objek:
+  data.map((item) => {
+    ({data: item + 1})
+  })
