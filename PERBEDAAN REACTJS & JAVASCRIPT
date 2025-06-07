@@ -183,4 +183,54 @@ SPREAD OPERATOR
     age2: 34,
   }
   const newUser = {...user, ...extendUser}
-  
+
+CONTROL STRUCTURE
+  //kebanyakan untuk melakukan kontrol terhadap item struktur data pada js menggunakan if
+  const word = prompt('type the word...')
+  if (word === 'good') {
+    console.log('it's correct')
+  } else if (word === 'bad') {
+    console.log('it's correct')
+  } else {
+    console.log("it's wrong")
+  }
+
+  //atau menggunakan perintah for untuk mengontrol aliran struktur data
+  const words = ['good', 'bad']
+  for (const word of wordsd) {
+    console.log(word)
+  }
+
+DOM Manipulating  
+  //Pada react manipulating menggunakan sintaksi deklaratif dari framework react
+
+  //Paramater juga bisa dijadikan sekaligus function dengan:
+  function greeter(greetFn) {
+    greetFn()
+  }
+
+  //dengan menambahkan argumen sebagai function kosong menggunakan sintaksis arrow function
+  greeter(() => console.log('hi'))
+
+  //di dalam function juga bisa memiliki fungsi lain yang didefinisikan
+  function init() {
+    const greeter => () {
+        console.log('hi')
+    }
+
+  greeter()
+  }
+
+  init()
+
+PRIMITIVE & REFERENCE VALUES
+  //variabel primitif ketika dikelola sejatinya tidak mengubah nilai awal akan tetapi membuat nilai baru
+  let greeter = 'hi'
+  greter = 'hallo'
+
+  //variabel referensi merupakan variabel yang nilainya bisa dirubah berdasarkan item data refernsinya. hal ini umumnya bekerja terhadap data array atau object
+  const words = ['good', 'bad']
+  words.push('wrong')
+
+  //tipe variabel conts sejatinya masih bisa dilakukan perubahan nilainya menggunakan variabel referensi. hanya saja tipe variabel const tidak bisa dilakukan overide terdap nama variabelnya
+
