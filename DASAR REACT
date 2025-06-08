@@ -1,4 +1,88 @@
-- untuk membuat user interface perlu memndefinisikan sebuah Components (bentuknya adalah function)
-- interaktif tampilan identik dengan pengelolaan Props dan State sehingga menjadi dinamasi dari statis
-- untuk mengkases sebuah components ke dalam element menggunakan simbol bracket brace (kurung kurawal)
-- reusable merupakan istilah untuk menggunakan kembali sebuah component. umumnya hal ini bekerja terhadap multiple data
+UMUM
+1. untuk membuat user interface perlu memndefinisikan sebuah Components (bentuknya adalah function)
+2. interaktif tampilan identik dengan pengelolaan Props dan State sehingga menjadi dinamasi dari statis
+3. untuk mengkases sebuah components ke dalam element menggunakan simbol bracket brace (kurung kurawal)
+  contoh:
+  <Header/>
+4. untuk mengkases nilai dari components ke dalam element menggunakan simbol bracket brace (kurung kurawal)
+  contoh:
+  {imgConcept}
+5. reusable merupakan istilah untuk menggunakan kembali sebuah component. umumnya hal ini bekerja terhadap multiple data
+
+PROPS
+1. Props digunakan untuk menerima nilai yang dikirimkan lebih dari satu
+2. Pendefinisian Props pada components untuk menerima data pass dari elemnt
+  const MenuItems = (props) {
+   return (
+    <li>
+      <img src={props.image}>
+      <h2>{props.title}<h2/>
+      <p>{props.description}<p/>
+    <li/>
+   ); 
+  }
+3. penulisan basic akses props pada element
+  <MenuItems 
+    title="Concept"
+    description="react concept is"
+    image=""
+  />
+  
+4. Penanganan Props dengan multiple data
+  Persiapkan data pada file data.js
+  import componentImg from '../assets/component.png'
+  dan seterusnya...
+
+  const MENU_ITEMS = [
+    {
+      image: componentImg,
+      title: 'Components',
+      description: 'component ais'
+    },
+    {
+      image: jsxImg,
+      title: 'JSX',
+      description: 'jsx ais'
+    },
+    {
+      image: propsImg,
+      title: 'Props',
+      description: 'props ais'
+    }
+  ]
+  export MENU_ITEMS
+
+5. Penulisan akses standar Props terhadap data multiple pada element
+  akses dari App.jsx
+  import { MENU_ITEMS } from './data.js'
+  
+  <MenuItems
+    image={MENU_ITEMS[0].image}
+    title={MENU_ITEMS[0].title}
+    description={MENU_ITEMS[0].description}
+  />
+  <MenuItems
+    image={MENU_ITEMS[1].image}
+    title={MENU_ITEMS[1].title}
+    description={MENU_ITEMS[1].description}
+  />
+  begitu seterusnya...
+  
+6. Atau dengan menggunakan operator spread (...) untuk mengeluarkan multiple data
+  <MenuItems {...MENU_ITEMS[0]}/>
+  <MenuItems {...MENU_ITEMS[1]}/>
+  <MenuItems {...MENU_ITEMS[2]}/>
+  dan seterusnya...
+
+8. Destructuring pada component atau format standar juga masih bisa diakses seperti penulisan PROPS pada point 2 diatas
+  const MenuItems = ({image, title, description}) {
+   return (
+    <li>
+      <img src={image}>
+      <h2>{title}<h2/>
+      <p>{description}<p/>
+    <li/>
+   ); 
+  }
+  
+  
