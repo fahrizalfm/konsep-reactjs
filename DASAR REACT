@@ -1,0 +1,4 @@
+- untuk membuat user interface perlu memndefinisikan sebuah Components (bentuknya adalah function)
+- interaktif tampilan identik dengan pengelolaan Props dan State sehingga menjadi dinamasi dari statis
+- untuk mengkases sebuah components ke dalam element menggunakan simbol bracket brace (kurung kurawal)
+- reusable merupakan istilah untuk menggunakan kembali sebuah component. umumnya hal ini bekerja terhadap multiple data
