@@ -68,7 +68,7 @@ PROPS
   />
   begitu seterusnya...
   
-6. Atau dengan menggunakan operator spread (...) untuk mengeluarkan multiple data
+6. Atau dengan menggunakan operator spread (...) untuk mengeluarkan multiple data sebagai alternatif penulisan/sintaksis
   <MenuItems {...MENU_ITEMS[0]}/>
   <MenuItems {...MENU_ITEMS[1]}/>
   <MenuItems {...MENU_ITEMS[2]}/>
@@ -84,5 +84,15 @@ PROPS
     <li/>
    ); 
   }
+
+STRUKTUR KODE DAN FILE YANG BAGUS
+1. Tidak disarankan meletakkan component dalam satu file
+2. Buat struktur component pada file atau folder berbeda
   
-  
+REACTING EVENTS
+- seperti aksi klik sebuah tombol/button
+  <button onClick={clickHandler}>Klik<button/>
+
+REACT HOOK
+- adalah function yang di panggil dari React library. contoh useState, useReduce dll
+- hooks function hanya bisa dijalankan di dalam sebuah komponen dan letak kodenya berada di paling atas pengkodean
